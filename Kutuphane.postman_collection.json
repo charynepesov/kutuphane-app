@@ -1,0 +1,790 @@
+{
+	"info": {
+		"_postman_id": "3e2cc401-b09a-4cf2-a7a3-d13fc5fdba89",
+		"name": "Kutuphane - NodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27347348"
+	},
+	"item": [
+		{
+			"name": "Kategori",
+			"item": [
+				{
+					"name": "Kategori Sil",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kategori",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kategori"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kategori Duzenle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"ad\": \"Polisiye\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kategori",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kategori"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kategori Ekle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ad\": \"Polisiye\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kategori",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kategori"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kategorileri Getir",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URI}}/kategoriler",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kategoriler"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kategori Getir",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kategori",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kategori"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kitaplar",
+			"item": [
+				{
+					"name": "Kitaplari Getir",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URI}}/kitaplar",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kitaplar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kitap Ekle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ad\": \"Anna Karenina\",\n    \"isbn\": \"88937879192\",\n    \"sayfa_sayisi\": 260,\n    \"yayin_tarihi\": \"2022-10-02\",\n    \"yazarlar\": [\n        \"Anna Karenina\"\n    ],\n    \"kategoriler\": [\n        \"Roman\",\n        \"Biyagrafi\"\n    ],\n    \"yayin_id\": 1,\n    \"kutuphane_id\": 1,\n    \"adet\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kitap",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kitap"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kitap Getir",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kitap",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kitap"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kitap Duzenle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ad\": \"Anna Karenina\",\n    \"isbn\": \"88937879649\",\n    \"sayfa_sayisi\": 270,\n    \"yayin_tarihi\": \"2022-10-12\",\n    \"yazarlar\": [\n        \"Anna Karenina\"\n    ],\n    \"kategoriler\": [\n        \"Roman\",\n        \"Biyagrafi\"\n    ],\n    \"yayin_id\": 1,\n    \"kutuphane_id\": 1,\n    \"adet\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kitap",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kitap"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kitap Sil",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kitap",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kitap"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kutuphane",
+			"item": [
+				{
+					"name": "Kutuphane Ekle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ad\": \"Kirsehir Merkez Kutuphanesi\",\n    \"il\": \"Kirsehir\",\n    \"ilce\": \"Merkez\",\n    \"mahalle\": \"Bagbasi\",\n    \"cadde\": \"Necdet Yagiz\",\n    \"sokak\": \"195\",\n    \"bina_no\": 10,\n    \"kat\": 3,\n    \"posta_kodu\": 40100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kutuphane",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kutuphane"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kutuphaneleri Getir",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URI}}/kutuphaneler",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kutuphaneler"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kutuphane Getir",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kutuphane",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kutuphane"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kutuphane Sil",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"adres_id\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kutuphane",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kutuphane"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kutuphane Duzenle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"ad\": \"Neset Ertas Kutuphanesi\",\n    \"adres_id\": 5,\n    \"il\": \"Kirsehir\",\n    \"ilce\": \"Merkez\",\n    \"mahalle\": \"Bagbasi\",\n    \"cadde\": \"Necdet Yagiz\",\n    \"sokak\": \"195\",\n    \"bina_no\": 10,\n    \"kat\": 5,\n    \"posta_kodu\": 40100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/kutuphane",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"kutuphane"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Uye",
+			"item": [
+				{
+					"name": "Uyeleri Getir",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URI}}/uyeler",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"uyeler"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uye Getir",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/uye",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"uye"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uye Ekle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ad\": \"Chary\",\n    \"soyad\": \"Nepesov\",\n    \"cinsiyet\": \"Erkek\",\n    \"eposta\": \"charydevel@gmail.com\",\n    \"telefon\": \"05511501639\",\n    \"il\": \"Kirsehir\",\n    \"ilce\": \"Merkez\",\n    \"mahalle\": \"Bagbasi\",\n    \"cadde\": \"Necdet Yagiz\",\n    \"sokak\": \"195\",\n    \"bina_no\": 10,\n    \"kat\": 3,\n    \"posta_kodu\": 40100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/uye",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"uye"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uye Duzenle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"ad\": \"Cagri\",\n    \"soyad\": \"Nepesov\",\n    \"cinsiyet\": \"Erkek\",\n    \"eposta\": \"charydevel@gmail.com\",\n    \"telefon\": \"05511501639\",\n    \"adres_id\": 9,\n    \"il\": \"Kirsehir\",\n    \"ilce\": \"Merkez\",\n    \"mahalle\": \"Bagbasi\",\n    \"cadde\": \"Necdet Yagiz\",\n    \"sokak\": \"195\",\n    \"bina_no\": 10,\n    \"kat\": 3,\n    \"posta_kodu\": 40100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/uye",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"uye"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uye Sil",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"adres_id\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/uye",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"uye"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Yayinevi",
+			"item": [
+				{
+					"name": "Yayinevleri Getir",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URI}}/yayinevler",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"yayinevler"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yayinevi Getir",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/yayinevi",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"yayinevi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yayinevi Ekle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ad\": \"Turkiye Is Bankasi Yayinlari\",\n    \"il\": \"Kirsehir\",\n    \"ilce\": \"Merkez\",\n    \"mahalle\": \"Bagbasi\",\n    \"cadde\": \"Necdet Yagiz\",\n    \"sokak\": \"85\",\n    \"bina_no\": 5,\n    \"kat\": 3,\n    \"posta_kodu\": 40100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/yayinevi",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"yayinevi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yayinevi Duzenler",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"ad\": \"Hazar Yayinlari\",\n    \"adres_id\": 6,\n    \"il\": \"Kirsehir\",\n    \"ilce\": \"Merkez\",\n    \"mahalle\": \"Bagbasi\",\n    \"cadde\": \"Necdet Yagiz\",\n    \"sokak\": \"195\",\n    \"bina_no\": 10,\n    \"kat\": 5,\n    \"posta_kodu\": 40100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/yayinevi",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"yayinevi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yayinevi Sil",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"adres_id\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/yayinevi",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"yayinevi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Yazar",
+			"item": [
+				{
+					"name": "Yazar Ekle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ad\": \"Zulfu\",\n    \"soyad\": \"Livaneli\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/yazar",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"yazar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yazarlari Getir",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URI}}/yazarlar",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"yazarlar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yazar Getir",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/yazar",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"yazar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yazar Duzenle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"ad\": \"Zülfü\",\n    \"soyad\": \"Livaneli\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/yazar",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"yazar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yazar Sil",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URI}}/yazar",
+							"host": [
+								"{{URI}}"
+							],
+							"path": [
+								"yazar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "URI",
+			"value": "http://localhost:5000"
+		}
+	]
+}
