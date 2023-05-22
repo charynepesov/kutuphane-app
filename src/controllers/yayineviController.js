@@ -44,3 +44,45 @@ exports.yayinevi_ekle = async (req, res) => {
         console.log(err.message);
     }
 };
+
+// PUT -> /yayinevi
+exports.yayinevi_duzenle= async (req, res) => {
+    try {
+        let id = req.body.id;
+        let ad = req.body.ad;
+        let adres_id = req.body.adres_id;
+        let il = req.body.il;
+        let ilce = req.body.ilce;
+        let mahalle = req.body.mahalle;
+        let cadde = req.body.cadde;
+        let sokak = req.body.sokak;
+        let bina_no = req.body.bina_no;
+        let kat = req.body.kat;
+        let posta_kodu = req.body.posta_kodu;
+
+        const adresGuncelle = await connection.query("UPDATE adresler SET il=$1, ilce=$2, mahalle=$3, cadde=$4, sokak=$5, bina_no=$6, kat=$7, posta_kodu=$8 WHERE id=$9", [il, ilce, mahalle, cadde, sokak, bina_no, kat, posta_kodu, adres_id]);
+
+        const yayineviGuncelle = await connection.query("UPDATE yayinevler SET ad=$1 WHERE id=$2", [ad,  id]);
+
+        res.json("yayinevi ve adres düzenleme başarılı.");
+    } catch (err) {
+        console.log(err.message);
+    }
+};
+
+
+// DELETE -> /yayinevi
+exports.yayinevi_sil = async (req, res) => {
+    try {
+        const id = req.body.id;
+        const adres_id = req.body.adres_id;
+
+        const yayineviSil = await connection.query("DELETE FROM yayinevler WHERE id = $1", [id]);
+
+        const adresSil = await connection.query("DELETE FROM adresler WHERE id=$1", [adres_id]);
+
+        res.json("yayinevi ve adres silme başarılı.");
+    } catch (err) {
+        console.log(err.message);
+    }
+};
