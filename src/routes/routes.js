@@ -13,6 +13,7 @@ const kutuphane_controller = require("../controllers/kutuphaneController");
 const uye_controller = require("../controllers/uyeController");
 const yayinevi_controller = require("../controllers/yayineviController");
 const yazar_controller = require("../controllers/yazarController");
+const emanet_controller = require("../controllers/emanetController");
 
 //KATEGORI
 router.get("/kategoriler", kategori_controller.kategoriler);
@@ -55,5 +56,10 @@ router.get("/yazar", yazar_controller.yazar);
 router.post("/yazar", yazar_controller.yazar_ekle);
 router.put("/yazar", yazar_controller.yazar_duzenle);
 router.delete("/yazar", yazar_controller.yazar_sil);
+
+//EMANET
+router.get("/emanetler", yazar_controller.emanetler);
+router.get("/emanet", yazar_controller.emanet);
+router.post("/emanet", yazar_controller.emanet_ekle);
 
 module.exports = router;
